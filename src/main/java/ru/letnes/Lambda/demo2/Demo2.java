@@ -20,7 +20,6 @@ public class Demo2 {
             }
         };
 
-
         Formula formula = new Formula() {
             @Override
             public double calculate(int a) {

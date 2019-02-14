@@ -24,7 +24,7 @@ public class Demo6 {
         ScriptEngine engine = new ScriptEngineManager().getEngineByName("nashorn");
         Invocable invoker = (Invocable) engine;
 
-        public JSExecutor() {
+        JSExecutor() {
             try {
                 File script = new File("script.js");
                 String scriptString = new String(Files.readAllBytes(script.toPath()));
@@ -34,7 +34,7 @@ public class Demo6 {
             }
         }
 
-        public Object executeFunction(String name, Object... args) {
+        Object executeFunction(String name, Object... args) {
             Object result = null;
             try {
                 result = invoker.invokeFunction(name, args);

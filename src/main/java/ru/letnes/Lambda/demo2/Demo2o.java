@@ -15,7 +15,7 @@ public class Demo2o {
         System.out.println(stringOptional.get()); // value
         System.out.println(stringOptional.isPresent()); // true
 
-        // System.out.println(emptyStringOptional.get()); // Exception in thread "main" java.util.NoSuchElementException: No value present
+        System.out.println(emptyStringOptional.get()); // Exception in thread "main" java.util.NoSuchElementException: No value present
         System.out.println(emptyStringOptional.isPresent()); // false
 
         stringOptional.ifPresent(new Consumer<String>() { // Demo2o.consumer.accept value

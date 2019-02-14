@@ -13,7 +13,6 @@ public class Demo2s {
                 return Arrays.asList("1", "2", "3");
             }
         };
-
         System.out.println(listSupplier.get()); //[1, 2, 3]
     }
 }

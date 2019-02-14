@@ -9,7 +9,6 @@ public class demo5 {
     public static void main(String[] args) {
         Clock clock = Clock.systemDefaultZone();
         long millis = clock.millis();
-
         Instant instant = clock.instant();
         Date legacyDate = Date.from(instant);
 

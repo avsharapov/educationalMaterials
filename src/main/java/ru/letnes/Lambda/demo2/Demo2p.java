@@ -29,9 +29,9 @@ public class Demo2p {
         System.out.println(stringPredicate.and(stringPredicate1).test("1")); //false
         System.out.println(stringPredicate.and(stringPredicate1).negate().test("")); //true
 
-
-        System.out.println(stringPredicate.or(stringPredicate1).test("")); //true
-        System.out.println(stringPredicate.or(stringPredicate1).test("1")); //false
-        System.out.println(stringPredicate.or(stringPredicate1).negate().test("")); //false
+        Predicate<String> or = stringPredicate.or(stringPredicate1);
+        System.out.println(or.test("")); //true
+        System.out.println(or.test("1")); //false
+        System.out.println(or.negate().test("")); //false
     }
 }

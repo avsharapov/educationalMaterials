@@ -7,15 +7,10 @@ public class Demo3 {
     static int d = 10;
 
     public static void main(String[] args) {
-        Function<String, Integer> toInteger = (s) -> {
-            return Integer.valueOf(s);
-        };
-        BinaryOperator<String> stringBinaryOperator = (s, s2) -> {
-            return s.concat(s2);
-        };
-        Formula formula = (a, b, c) -> {
-            return a + b + c + d;
-        };
+        int ff = 9;
+        Function<String, Integer> toInteger = Integer::valueOf;
+        BinaryOperator<String> stringBinaryOperator = String::concat;
+        Formula formula = (a, b, c) -> {return a + b + c + d + ff;};
 
         System.out.println(formula.calculate(1, 2, 3)); // 16
         System.out.println(stringBinaryOperator.apply("123", "2")); // 1232
@@ -29,7 +24,7 @@ public class Demo3 {
 
         // constructor reference
         MyClassFactory<MyClass> classFactory = MyClass::new;
-        MyClass instance = classFactory.getInstance(5);
+        MyClass instance = classFactory.getInstance();
         System.out.println(instance.getNumber());
     }
 }
