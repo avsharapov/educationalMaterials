@@ -9,18 +9,29 @@ var validate = function(target) {
         
         
         };
-        return "fail";
-    } else {
+
         var validate = function(target) {
             if (target > 0) {
                 return "fail";
             } else {
-                return "success";
+                clearTimeout();
             }
         
         
         };
-        return "success";
+        return "fail";
+        
+    var validate = function(target) {
+        if (target > 0) {
+            return "fail";
+        } else {
+            clearTimeout();
+        }
+    
+    
+    };
+    } else {
+
     }
 
     var validate = function(target) {
